@@ -1,0 +1,80 @@
+{
+    "System": {
+        "Autoload": {
+            "Prefix": [
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Domain",
+                    "directory": "{{config('project.dir.domain')}}",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Source",
+                    "directory": "{{config('project.dir.source')}}",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Doctrine",
+                    "directory": "{{config('project.dir.source')}}Doctrine\/",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Entity",
+                    "directory": "{{config('project.dir.source')}}Entity\/",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Event",
+                    "directory": "{{config('project.dir.event')}}",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Middleware",
+                    "directory": "{{config('project.dir.middleware')}}",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Output\\Filter",
+                    "directory": "{{config('project.dir.output.filter')}}",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "ORM",
+                    "directory": "{{config('project.dir.source')}}ORM\/",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Package",
+                    "directory": "{{config('project.dir.package')}}",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "R3m\\Io\\Module\\Compile",
+                    "directory": "{{config('ramdisk.url')}}{{config('posix.id')}}\/Compile\/",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Repository",
+                    "directory": "{{config('project.dir.source')}}Repository\/",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
+                    "prefix": "Symfony",
+                    "directory": "{{config('project.dir.source')}}Symfony\/",
+                    "extension": ""
+                }
+            ]
+        }
+    }
+}

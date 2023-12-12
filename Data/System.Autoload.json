@@ -1,0 +1,10 @@
+{
+    "System": {
+        "Autoload": [
+            {
+                "#class": "System.Autoload",
+                "prefix": "*"
+            }
+        ]
+    }
+}
