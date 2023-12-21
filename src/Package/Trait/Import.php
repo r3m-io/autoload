@@ -57,7 +57,7 @@ trait Import {
     /**
      * @throws Exception
      */
-    public function autoload_config(): void
+    public function config_autoload(): void
     {
         $object = $this->object();
         $options = App::options($object);
