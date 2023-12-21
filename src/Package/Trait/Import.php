@@ -33,7 +33,7 @@ trait Import {
         ;
         $node = new Node($object);
         $response = $node->import($class, $node->role_system(), $options);
-        $this->stats($class, $response);
+        $node->stats($class, $response);
     }
 
     /**
@@ -51,7 +51,7 @@ trait Import {
         ;
         $node = new Node($object);
         $response = $node->import($class, $node->role_system(), $options);
-        $this->stats($class, $response);
+        $node->stats($class, $response);
     }
 
     /**
@@ -81,117 +81,6 @@ trait Import {
                 array_key_exists('node', $response)
             ){
                 echo 'Configured ' . $class . ' autoload...' . PHP_EOL;
-            }
-        }
-    }
-
-    public function stats($class, $response): void
-    {
-        if(
-            $response &&
-            array_key_exists('create', $response) &&
-            array_key_exists('put', $response) &&
-            array_key_exists('patch', $response) &&
-            array_key_exists('commit', $response) &&
-            array_key_exists('speed', $response['commit']) &&
-            array_key_exists('item_per_second', $response)
-        ) {
-            $total = $response['create'] + $response['put'] + $response['patch'];
-            if ($total === 1) {
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') item (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL;
-            } else {
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') items (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL;
-            }
-        }
-    }
-
-    /**
-     * @throws Exception
-     */
-    public function event(): void
-    {
-        $object = $this->object();
-        $options = App::options($object);
-        $class = 'System.Event';
-        $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/event/Data/' .
-            $class .
-            $object->config('extension.json')
-        ;
-        $node = new Node($object);
-        $response = $node->import($class, $node->role_system(), $options);
-        if(
-            $response &&
-            array_key_exists('create', $response) &&
-            array_key_exists('put', $response) &&
-            array_key_exists('patch', $response) &&
-            array_key_exists('commit', $response) &&
-            array_key_exists('speed', $response['commit']) &&
-            array_key_exists('item_per_second', $response)
-        ){
-            $total = $response['create'] + $response['put'] + $response['patch'];
-            if($total === 1){
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') item (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL
-                ;
-            } else {
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') items (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL
-                ;
             }
         }
     }
