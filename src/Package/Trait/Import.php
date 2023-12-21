@@ -75,10 +75,14 @@ trait Import {
                 'autoload' => '*'
             ];
             $response = $node->patch($class, $node->role_system(), $patch);
-            ddd($response);
+            if(
+                $response &&
+                is_array($response) &&
+                array_key_exists('node', $response)
+            ){
+                echo 'Configured ' . $class . ' autoload...' . PHP_EOL;
+            }
         }
-        ddd($response);
-        $this->stats($class, $response);
     }
 
     public function stats($class, $response): void
