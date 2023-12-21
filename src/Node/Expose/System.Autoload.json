@@ -45,6 +45,28 @@
                     }
                 ]
             },
+            "create_many": {
+                "expose": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "prefix"
+                        ],
+                        "object": {
+                            "prefix": {
+                                "multiple": true,
+                                "expose": [
+                                    "prefix",
+                                    "directory",
+                                    "extension"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
             "list": {
                 "expose": [
                     {
@@ -111,7 +133,51 @@
                     }
                 ]
             },
+            "patch_many": {
+                "expose": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "prefix"
+                        ],
+                        "object": {
+                            "prefix": {
+                                "multiple": true,
+                                "expose": [
+                                    "prefix",
+                                    "directory",
+                                    "extension"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
             "put": {
+                "expose": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "prefix"
+                        ],
+                        "object": {
+                            "prefix": {
+                                "multiple": true,
+                                "expose": [
+                                    "prefix",
+                                    "directory",
+                                    "extension"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            "put_many": {
                 "expose": [
                     {
                         "role": "ROLE_SYSTEM",
