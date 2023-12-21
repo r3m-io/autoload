@@ -27,7 +27,7 @@ trait Import {
         $options = App::options($object);
         $class = 'System.Autoload';
         $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/config/Data/' .
+            'r3m_io/autoload/Data/' .
             $class .
             $object->config('extension.json')
         ;
@@ -45,7 +45,7 @@ trait Import {
         $options = App::options($object);
         $class = 'System.Autoload.Prefix';
         $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/config/Data/' .
+            'r3m_io/autoload/Data/' .
             $class .
             $object->config('extension.json')
         ;
