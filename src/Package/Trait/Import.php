@@ -64,6 +64,19 @@ trait Import {
         $class = 'System.Config';
         $node = new Node($object);
         $response = $node->record($class, $node->role_system(), []);
+        if(
+            $response &&
+            is_array($response) &&
+            array_key_exists('node', $response) &&
+            property_exists($response['node'], 'uuid')
+        ){
+            $patch = (object) [
+                'uuid' => $response['node']->uuid,
+                'autoload' => '*'
+            ];
+            $response = $node->patch($class, $node->role_system(), $patch);
+            ddd($response);
+        }
         ddd($response);
         $this->stats($class, $response);
     }
