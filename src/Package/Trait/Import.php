@@ -1,5 +1,5 @@
 <?php
-namespace Package\R3m\Io\Config\Trait;
+namespace Package\R3m\Io\Autoload\Trait;
 
 use R3m\Io\App;
 
@@ -51,6 +51,20 @@ trait Import {
         ;
         $node = new Node($object);
         $response = $node->import($class, $node->role_system(), $options);
+        $this->stats($class, $response);
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function autoload_config(): void
+    {
+        $object = $this->object();
+        $options = App::options($object);
+        $class = 'System.Config';
+        $node = new Node($object);
+        $response = $node->record($class, $node->role_system(), []);
+        ddd($response);
         $this->stats($class, $response);
     }
 
