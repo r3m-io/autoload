@@ -24,6 +24,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:create.many",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:count",
       "#class": "Account.Permission"
     },
@@ -44,7 +48,15 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:put.many",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Autoload:patch.many",
       "#class": "Account.Permission"
     },
     {
@@ -88,6 +100,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:Prefix:create.many",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:Prefix:count",
       "#class": "Account.Permission"
     },
@@ -108,7 +124,15 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:Prefix:put.many",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:Prefix:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Autoload:Prefix:patch.many",
       "#class": "Account.Permission"
     },
     {
