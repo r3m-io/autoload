@@ -14,8 +14,11 @@ trait Import {
     public function role_system(): void
     {
         $object = $this->object();
-        $node = new Node($object);
-        $node->role_system_create('r3m_io/autoload');
+        $package = $object->request('package');
+        if($package){
+            $node = new Node($object);
+            $node->role_system_create($package);
+        }
     }
 
     /**
@@ -24,16 +27,19 @@ trait Import {
     public function autoload(): void
     {
         $object = $this->object();
-        $options = App::options($object);
-        $class = 'System.Autoload';
-        $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/autoload/Data/' .
-            $class .
-            $object->config('extension.json')
-        ;
-        $node = new Node($object);
-        $response = $node->import($class, $node->role_system(), $options);
-        $node->stats($class, $response);
+        $package = $object->request('package');
+        if($package){
+            $options = App::options($object);
+            $class = 'System.Autoload';
+            $options->url = $object->config('project.dir.vendor') .
+                $package . '/Data/' .
+                $class .
+                $object->config('extension.json')
+            ;
+            $node = new Node($object);
+            $response = $node->import($class, $node->role_system(), $options);
+            $node->stats($class, $response);
+        }
     }
 
     /**
@@ -42,16 +48,20 @@ trait Import {
     public function autoload_prefix(): void
     {
         $object = $this->object();
-        $options = App::options($object);
-        $class = 'System.Autoload.Prefix';
-        $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/autoload/Data/' .
-            $class .
-            $object->config('extension.json')
-        ;
-        $node = new Node($object);
-        $response = $node->import($class, $node->role_system(), $options);
-        $node->stats($class, $response);
+        $package = $object->request('package');
+        if($package){
+            $options = App::options($object);
+            $class = 'System.Autoload.Prefix';
+            $options->url = $object->config('project.dir.vendor') .
+                $package . '/Data/' .
+                $class .
+                $object->config('extension.json')
+            ;
+            $node = new Node($object);
+            $response = $node->import($class, $node->role_system(), $options);
+            $node->stats($class, $response);
+        }
+
     }
 
     /**
