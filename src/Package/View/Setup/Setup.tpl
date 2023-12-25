@@ -1,3 +1,4 @@
+{{R3M}}
 {{$register = Package.R3m.Io.Autoload:Init:register()}}
 {{if(!is.empty($register))}}
 {{Package.R3m.Io.Autoload:Import:role.system()}}
