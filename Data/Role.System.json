@@ -68,6 +68,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:property.delete",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:list",
       "#class": "Account.Permission"
     },
@@ -141,6 +145,10 @@
     },
     {
       "name": "System:Autoload:Prefix:page.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Autoload:Prefix:property.delete",
       "#class": "Account.Permission"
     },
     {
