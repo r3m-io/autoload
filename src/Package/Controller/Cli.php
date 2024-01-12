@@ -33,7 +33,7 @@ class Cli extends Controller {
     public static function run(App $object): mixed
     {
         $node = $object->request(0);
-        $scan = \Package\R3m\Io\Config\Controller\Cli::scan($object);
+        $scan = Cli::scan($object);
         $module = (string) $object->parameter($object, $node, 1);
         if(
             !in_array(
