@@ -28,6 +28,12 @@
                 },
                 {
                     "#class": "System.Autoload.Prefix",
+                    "prefix": "Cli",
+                    "directory": "{{config('project.dir.cli')}}",
+                    "extension": ""
+                },
+                {
+                    "#class": "System.Autoload.Prefix",
                     "prefix": "Event",
                     "directory": "{{config('project.dir.event')}}",
                     "extension": ""
