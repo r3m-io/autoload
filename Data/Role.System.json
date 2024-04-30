@@ -80,6 +80,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:list.parse",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:rename",
       "#class": "Account.Permission"
     },
@@ -157,6 +161,10 @@
     },
     {
       "name": "System:Autoload:Prefix:list.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Autoload:Prefix:list.parse",
       "#class": "Account.Permission"
     },
     {
