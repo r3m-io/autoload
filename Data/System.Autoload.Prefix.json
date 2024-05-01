@@ -83,13 +83,13 @@
                 {
                     "#class": "System.Autoload.Prefix",
                     "prefix": "Exception",
-                    "directory": "{{config('project.dir.exception')}}\/",
+                    "directory": "{{config('project.dir.exception')}}",
                     "extension": ""
                 },
                 {
                     "#class": "System.Autoload.Prefix",
                     "prefix": "Plugin",
-                    "directory": "{{config('project.dir.plugin')}}\/",
+                    "directory": "{{config('project.dir.plugin')}}",
                     "extension": ""
                 }
             ]
