@@ -30,20 +30,6 @@
                         }
                     ]
                 },
-                "create_many": {
-                    "output": [
-                        {
-                            "role": "ROLE_SYSTEM",
-                            "property": [
-                                "uuid",
-                                "#class",
-                                "prefix",
-                                "directory",
-                                "extension"
-                            ]
-                        }
-                    ]
-                },
                 "list": {
                     "output": [
                         {
@@ -86,35 +72,7 @@
                         }
                     ]
                 },
-                "patch_many": {
-                    "output": [
-                        {
-                            "role": "ROLE_SYSTEM",
-                            "property": [
-                                "uuid",
-                                "#class",
-                                "prefix",
-                                "directory",
-                                "extension"
-                            ]
-                        }
-                    ]
-                },
                 "put": {
-                    "output": [
-                        {
-                            "role": "ROLE_SYSTEM",
-                            "property": [
-                                "uuid",
-                                "#class",
-                                "prefix",
-                                "directory",
-                                "extension"
-                            ]
-                        }
-                    ]
-                },
-                "put_many": {
                     "output": [
                         {
                             "role": "ROLE_SYSTEM",
