@@ -40,6 +40,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:read.parse",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:read.relation",
       "#class": "Account.Permission"
     },
@@ -121,6 +125,10 @@
     },
     {
       "name": "System:Autoload:Prefix:read",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Autoload:Prefix:read.parse",
       "#class": "Account.Permission"
     },
     {
