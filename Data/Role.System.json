@@ -16,6 +16,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Autoload:record.parse",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Autoload:record.relation",
       "#class": "Account.Permission"
     },
@@ -101,6 +105,10 @@
     },
     {
       "name": "System:Autoload:Prefix:record",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Autoload:Prefix:record.parse",
       "#class": "Account.Permission"
     },
     {
